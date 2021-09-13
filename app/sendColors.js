@@ -107,7 +107,6 @@ sendColorsButton.addEventListener('click', () => {
     ${goodPlaceAndColorPawn} couleur bien placées.
     `;
 
-    //!\ TODO alert() s'affiche avant la ligne proposée. A changer
     if (goodPlaceAndColorPawn === 5) {
         infos.textContent = `VICTOIRE !! en ${countTurn} coups.`;
         userBloc.classList.remove('ingame'); //griser proposition de couleur et 'envoyer'
