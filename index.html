@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MasterMind</title>
+</head>
+
+<!-- <p>TODO : Indice du nombre de coul differentes à 6coups / options difficulter avec nb couleur et répétition ou non
+  avec affichage du nb possiblités, Afficher toutes les grilles vides de propositions ?/ Afficher le code à la
+  victoire.</p>
+Règle du jeu et option(coming soon à gerer) mettre sur git hub-->
+
+
+
+<body>
+
+  <section class="rules"> <h1 class="home-main-title">MasterMind</h1>
+    <p class="home-main-p">Bienvenue sur ma page-projet du
+        jeu Mastermind en Javascript, HTML et CSS.</p>
+
+    <p class="home-main-p">
+        <span>Règles du jeu :</span>
+        Vous allez devoir trouver un code secret composé de 5 billes de couleur. Pour cela vous aurez 12 propositions
+        maximum de code. A chaque proposition vous pourez savoir combien de billes sont bien placées et combien se
+        trouvent dans le code mais au mauvais endroit. Bonne chance !!
+    </p>
+    <p class="home-main-p"><a class="home-main-link" a href="index.html">Jouer</a></p>
+  </section>
+
+  <section class="optionsPage"> <h1 class="home-main-title">MasterMind</h1>
+    <p class="home-main-p">Bienvenue sur ma page-projet du
+        jeu Mastermind en Javascript, HTML et CSS.</p>
+
+    <p class="home-main-p">
+        <h2>Otions</h2>
+       <p> Les options arrivent prochainement.</p>
+        <ul>Au menu :
+          <li>La possibilité d'avoir après 6 essais un indice contenant le nombre de couleur différentes du code</li>
+          <li>La possibilité de choisir le nombre de couleur différentes de 4 à 7</li>
+          <li>Accepter ou non la répétition d'une couleur dans le code.</li>
+
+        </ul> 
+    </p>
+    <p class="home-main-p"><a class="home-main-link" a href="index.html">Jouer</a></p>
+  </section>
+  
+
+  <div class="mainContainer">
+
+    <header class="menu">
+      <h1>Master Mind</h1>
+      <button class="play">Lancer une partie</button>
+      <p class="infos">
+        --
+      </p>
+    </header>
+
+    <div class="game">
+
+      <div class="lineContainer hiddenCode">
+        <div class="bille hc one"></div>
+        <div class="bille hc two"></div>
+        <div class="bille hc three"></div>
+        <div class="bille hc four"></div>
+        <div class="bille hc five"></div>
+      </div>
+
+
+    </div> <!-- fin de DIV Game -->
+    <section class="userbloc">
+
+      <div class="linksmenu options">Options</div>
+
+      <div class="user">
+        <div class="lineContainer propositionCode">
+          <div class="bille pc"></div>
+          <div class="bille pc"></div>
+          <div class="bille pc"></div>
+          <div class="bille pc"></div>
+          <div class="bille pc"></div>
+        </div>
+        <button class="sendColors" disabled="disabled">Envoyer</button>
+      </div><!-- fin du user -->
+
+      <div class="linksmenu howto">Règles du Jeu</div>
+    </section><!-- fin du userbloc -->
+    
+
+    <!-- Templates -->
+
+    <template id="choiceOfColor">
+      <div class="colorchoose">
+        <div class="bille ec zero"></div>
+        <div class="bille ec prov one"></div>
+        <div class="bille ec prov two"></div>
+        <div class="bille ec prov three"></div>
+        <div class="bille ec prov four"></div>
+        <div class="bille ec prov five"></div>
+        <div class="bille ec prov six"></div>
+      </div>
+    </template>
+
+
+
+
+    <template id="proposition">
+      <div class="lineContainer colorexemple">
+
+        <div class="proviresult goodColor">
+          <div class="resultroundContainer">
+            <div class="gcresultround"></div>
+            <div class="gcresultround"></div>
+          </div>
+          <div class="gcresultround"></div>
+          <div class="resultroundContainer">
+            <div class="gcresultround"></div>
+            <div class="gcresultround"></div>
+          </div>
+        </div>
+
+        <div class="billesTemplate lineContainer"></div>
+
+        <div class="proviresult goodPlace">
+          <div class="resultroundContainer">
+            <div class="gpresultround"></div>
+            <div class="gpresultround"></div>
+          </div>
+          <div class="gpresultround"></div>
+          <div class="resultroundContainer">
+            <div class="gpresultround"></div>
+            <div class="gpresultround"></div>
+          </div>
+        </div>
+
+      </div>
+    </template>
+
+
+  </div><!-- fin de div mainContainer  -->
+
+  <!-- templates inutilisés  -->
+  <template class="inutilise" id="exemple">
+
+
+    <div class="exemple">
+      <div class="lineContainer colorexemple">
+        <div class="bille ec one"></div>
+        <div class="bille ec two"></div>
+        <div class="bille ec three"></div>
+        <div class="bille ec four"></div>
+        <div class="bille ec five"></div>
+        <div class="bille ec six"></div>
+      </div>
+
+      <div class="lineContainer colorexemple">
+
+        <div class="proviresult goodColor">
+          <div class="resultroundContainer">
+            <div class="resultround"></div>
+            <div class="resultround"></div>
+          </div>
+          <div class="resultround"></div>
+          <div class="resultroundContainer">
+            <div class="resultround"></div>
+            <div class="resultround"></div>
+          </div>
+        </div>
+
+        <div class="lineContainer">
+          <div class="bille"></div>
+          <div class="bille"></div>
+          <div class="bille"></div>
+          <div class="bille"></div>
+          <div class="bille"></div>
+        </div>
+
+        <div class="proviresult goodPlace">
+          <div class="resultroundContainer">
+            <div class="resultround"></div>
+            <div class="resultround"></div>
+          </div>
+          <div class="resultround"></div>
+          <div class="resultroundContainer">
+            <div class="resultround"></div>
+            <div class="resultround"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </template>
+  <!-- fin templates inutilisés  -->
+
+
+  <script src="app/colorWheel.js" defer></script>
+  <script src="app/start.js" defer></script>
+  <script src="app/sendColors.js" defer></script>
+</body>
+
+</html>

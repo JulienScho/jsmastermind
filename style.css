@@ -1,0 +1,457 @@
+body {
+    background-color: #f1f1f1;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ec.one {
+    background-color: black;
+}
+
+.ec.two {
+    background-color: white;
+}
+
+.ec.three {
+    background-color: red;
+}
+
+.ec.four {
+    background-color: yellow;
+}
+
+.ec.five {
+    background-color: green;
+}
+
+.ec.six {
+    background-color: blue;
+}
+
+/* header .menu */
+.mainContainer {
+    height: 90vh;
+}
+
+
+
+/* header .menu */
+h1 {
+    text-align: center;
+    margin: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.play {
+    width: 100px;
+    margin: 10px;
+}
+
+.menu {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.infos {
+    text-align: center;
+}
+
+button {
+    /* background-color: #CECECE; */
+    background-color: #3E56C4;
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    /* text-shadow: 2px 2px 2px rgba(0,0,0,0.3); */
+
+}
+
+button.sendColors:disabled {
+    background-color: #CECECE;
+}
+
+/* fin header menu */
+
+/* .exemple {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px
+} */
+
+.proviresult {
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30px;
+    width: 30px;
+    margin: 3px 30px;
+    border-radius: 20%;
+
+}
+
+.gcresultround,
+.gpresultround,
+.resultround {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: solid 1px black;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+.resultroundContainer {
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.game,
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userbloc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+}
+
+.userbloc .linksmenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: inset -5px -5px 15px #dedede,
+        inset 5px 5px 15px #ffffff;
+    position: fixed;
+}
+
+.userbloc .linksmenu:hover {
+    background: #fcfcfc;
+    box-shadow: -6px -6px 7px #bdbdbd,
+        6px 6px 7px #ffffff;
+    transform: translateY(2px);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.userbloc .linksmenu.options {
+    top: 30px;
+}
+
+.userbloc .linksmenu.howto {
+    top: 100px;
+}
+
+.user {
+    width: 200px;
+    border-radius: 20px;
+    margin: 10px auto;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: rgb(255, 255, 255);
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: max-height 1.5s;
+}
+
+.user.ingame {
+    transition: max-height 1.5s;
+    max-height: 300px;
+}
+
+.game {
+    border-radius: 10%;
+    margin: 0 auto;
+    height: 70%;
+    max-width: 400px;
+    /* border: 1px solid black */
+    box-shadow: inset -5px -5px 15px #dedede,
+        inset 5px 5px 15px #ffffff;
+}
+
+.bille {
+    height: 25px;
+    width: 25px;
+    /* border: solid 1px black; */
+    border-radius: 50%;
+    margin: 3px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.bille.pc {
+    background-color: rgb(157, 157, 158);
+}
+
+.lineContainer {
+    display: flex;
+    align-items: center;
+    margin: 1px auto;
+    cursor: pointer;
+}
+
+.hiddenCode {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: rgb(153, 149, 149) solid 1px;
+    border-bottom-right-radius: 7%;
+    border-bottom-left-radius: 7%;
+}
+
+.colorchoose {
+    display: flex;
+    /* border: 1px solid black;      */
+}
+
+/* Choix de couleur */
+.prov.bille {
+    position: absolute;
+}
+
+/* .colorchoose .bille.ec.zero{} */
+.bille.ec.prov.zero {
+    margin: 0px;
+}
+
+.bille.ec.prov.one {
+
+    transform: rotate(60deg) translate(42px);
+}
+
+.bille.ec.prov.two {
+    transform: rotate(120deg) translate(42px);
+}
+
+.bille.ec.prov.three {
+    transform: rotate(180deg) translate(42px);
+}
+
+.bille.ec.prov.four {
+    transform: rotate(240deg) translate(42px);
+}
+
+.bille.ec.prov.five {
+    transform: rotate(300deg) translate(42px);
+}
+
+.bille.ec.prov.six {
+    transform: rotate(360deg) translate(42px);
+}
+
+
+.bille.ec.prov.one:hover {
+    transform: rotate(60deg) translate(42px) scale(1.2);
+}
+
+.bille.ec.prov.two:hover {
+    transform: rotate(120deg) translate(42px) scale(1.2);
+}
+
+.bille.ec.prov.three:hover {
+    transform: rotate(180deg) translate(42px) scale(1.2);
+}
+
+.bille.ec.prov.four:hover {
+    transform: rotate(242deg) translate(42px) scale(1.2);
+}
+
+.bille.ec.prov.five:hover {
+    transform: rotate(300deg) translate(42px) scale(1.2);
+}
+
+.bille.ec.prov.six:hover {
+    transform: rotate(360deg) translate(42px) scale(1.2);
+}
+
+
+.invisible {
+    display: none;
+}
+
+.sendColors {
+    width: 150px;
+    margin: 10px auto;
+}
+
+/* Accueil - Main */
+.home-main-title {
+    margin-top: 25px;
+}
+
+
+.home-main {
+    padding: 20px;
+    max-width: 600px;
+    min-width: 300px;
+    width: 80%;
+    margin: 150px auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    border-radius: 20%;
+    background-color: #FFF;
+    transition: box-shadow 6s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.home-main-p {
+    padding: 20px;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px;
+}
+
+.home-main-p span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.home-footer {
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.home-main-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.home-main-link:hover {
+    border-bottom: black 1px solid;
+    text-shadow: rgb(81, 69, 197) 1px 0px 10px;
+}
+
+/* règles du jeu et options */
+.rules,
+.optionsPage {
+    display: none;
+
+    position: fixed;
+    top: 5px;
+    left: calc(50% - 48vw);
+
+    height: 96vh;
+    width: 96vw;
+
+    text-align: center;
+
+    border-radius: 7px;
+    background: #fcfcfc;
+    box-shadow: -33px -33px 66px #bdbdbd,
+        33px 33px 66px #ffffff;
+}
+
+li {
+    list-style: none;
+}
+
+
+@media all and (max-width: 400px) {
+
+    .bille.hc,
+    .bille.pc {
+        height: 15px;
+        width: 15px;
+    }
+
+    .user .bille.pc {
+        height: 30px;
+        width: 30px;
+    }
+
+    .menu {
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu h1 {
+        margin: 3px;
+
+    }
+
+    .menu .play {
+        margin: 3px 3px 3px 30px;
+
+    }
+
+    .menu .infos {
+        margin: 8px;
+        min-width: 100px;
+        font-size: 14px;
+
+    }
+
+    .mainContainer {
+        height: 95vh;
+
+    }
+
+    .user.ingame {
+        height: 10%;
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3px auto;
+        display: fixed;
+        bottom: 3px;
+    }
+
+    .proviresult {
+        border: none;
+        flex-direction: row;
+        width: 15%;
+    }
+
+    .hiddenCode {
+        margin-bottom: 4px;
+        padding: 3px;
+    }
+
+    .game {
+        overflow-y: auto;
+        min-width: 300px;
+        margin: 1px auto;
+        height: 75%;
+    }
+
+    .lineContainer .colorexemple {
+        width: 90%;
+        max-width: 280px;
+    }
+
+
+
+}
+
+@media all and (max-width: 700px) {
+
+    .userbloc .linksmenu {
+        position: initial;
+    }
+
+}
