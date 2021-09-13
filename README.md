@@ -14,6 +14,7 @@ C'est à tester [ici](https://jsmm.surge.sh/). N'hésitez pas à m'envoyer vos r
 - Des options pour modifier le niveau de difficulté
 - Un indice disponible à mi-parcours
 - Amélioration globale visuelle (UI) et utilisation (UX)
+- Refactorisation du code
 
 ## Visuels 
 <center>
